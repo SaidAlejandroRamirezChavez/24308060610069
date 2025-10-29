@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block contenido  %}
+
+<div class="bg-info">
+    <h1 class="container text-center">Resultado de la calculadora de TMB y GET</h1>
+    <h2 class="container text-center">Tu TMB es: {{ tmb }} calorías</h2>
+    <h2 class="container text-center">Tu GET es: {{ get }} calorías</h2>    
+
+    <a class="nav-link active bg-secondary text-center"  aria-current="page" href="/formulario" target="_self">calcular otro</a>
+</div>
+
+
+{% endblock %}

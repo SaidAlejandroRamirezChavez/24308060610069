@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block contenido  %}
+
+<h1 class="container text-center  ">Bienvenido a la calculadora de TMB y GET, por favor, introdusca los datos solicitados</h1>
+
+<form class="container bg-info" action="{{ url_for('calcular') }}" method="POST">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">peso(kg)</label>
+    <input type="number" class="form-control" id="peso" name="peso" aria-describedby="numberHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Altura(cm)</label>
+    <input type="number" class="form-control" id="Altura" name="altura">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Edad(años)</label>
+    <input type="number" class="form-control" id="Edad" name="edad" aria-describedby="numberHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">genero</label>
+      <select class="form-select" aria-label="Default select example" id="genero" name="genero">
+        <option value="1">masculino</option>
+        <option value="2">femenino</option>
+      </select>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">cantidad de actividad fisica</label>
+      <select class="form-select" aria-label="Default select example" id="actividad" name="actividad">
+        <option value="1">sedentario</option>
+        <option value="2">ligero</option>
+        <option value="3">moderado</option>
+        <option value="4">alta</option>
+      </select>
+  </div>
+
+  <button type="submit" class="btn btn-primary">calcular</button>
+</form>
+
+
+{% endblock %}
